@@ -1,0 +1,19 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-body": "^2.5.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^4.0.2",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.6"
+  }
+}
