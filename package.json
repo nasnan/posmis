@@ -9,9 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.6.1",
     "koa": "^2.5.1",
     "koa-body": "^2.5.0",
     "koa-route": "^3.2.0",
+    "koa-router": "^7.4.0",
     "koa-static": "^4.0.2",
     "mysql2": "^1.5.3",
     "sequelize": "^4.37.6"

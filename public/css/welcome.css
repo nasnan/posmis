@@ -16,10 +16,11 @@
 	font:14px/1.5 \5fae\8f6f\96c5\9ed1;
 }
 .signContent label{
-	width: 100px;
+	width: 90px;
 	height: 30px;
 	text-align: right;
 	display: inline-block;
+	padding-right: 10px;
 }
 .signContent input{
 	line-height: 30px;
@@ -38,4 +39,7 @@
 	border-radius: 5px;
 	border: 0px;
 	cursor: pointer;
+}
+.signError{
+	display: none;
 }

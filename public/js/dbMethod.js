@@ -13,7 +13,7 @@ const sequelize = new Sequelize(config.database, config.username, config.passwor
   },
 })
 
-var user = sequelize.define('open',{
+var userOpen = sequelize.define('open',{
   account_id:{
     type: Sequelize.INTEGER(11),
     primaryKey: true
@@ -27,10 +27,17 @@ var user = sequelize.define('open',{
   freezeTableName: true
 });
 
+var userRegister = sequelize.define('register',{
+  name:{
+    type: Sequelize.STRING(20),
+    primaryKey: true,
+  },
+  password: Sequelize.STRING(8)
+})
 
 
-var selectAll=async function(){
-  let users = await user.findAll();
+var selectAll=async function(dbusername){
+  let users = await dbusername.findAll();
   let ans={"ans":[]};
   for (let u of users){
     ans['ans'].push(JSON.stringify(u));
@@ -40,6 +47,13 @@ var selectAll=async function(){
 
 module.exports = selectAll;
 
+// async 
+
+
+
+
+
+// var 
 
 // (async()=>{
 //   var users = await user.findAll({

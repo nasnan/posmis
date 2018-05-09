@@ -1,23 +1,18 @@
 const Koa = require('koa');
+const app = new Koa();
 const path=require('path');
 const server=require('koa-static');
-const koaBody = require('koa-body');
-const route = require('koa-route');
+const router = require('koa-router')();
 
-const app = new Koa();
-const selectAll = require('./public/js/dbMethod');
+const user=require('./routes/user');
 
 
-
-const test = (ctx, next) => {
-
-  selectAll().then((data)=>console.log(data))
-}
+router.use('/user',user.routes());
 
 
 app.use(server(path.join(__dirname)));
-app.use(koaBody());
-app.use(route.get('/posmis',test));
+
+app.use(router.routes(), router.allowedMethods());
 
 
 app.listen(3000);
