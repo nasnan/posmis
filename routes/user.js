@@ -1,12 +1,14 @@
 const router=require('koa-router')();
-const koaBody = require('koa-body')({ multipart: true });
+const koaBody = require('koa-body');
 const fs=require('fs');
 const path=require('path');
 
 //注册页
+
 router.post('/register',(ctx,next)=>{
-	body=ctx.request.body;
-	console.log(body)
+	let body=ctx.request.body;
+
+	console.log(body,'body');
 	ctx.response.tyle='json';
 	ctx.body={'a':'a'}
 
