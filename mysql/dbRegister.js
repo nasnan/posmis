@@ -15,12 +15,15 @@ var userRegister = dbMethod.sequelize.define(dbName,{
 )
 
 
-var selectAll=dbMethod.selectAll(userRegister);
+var selectAll=async()=>dbMethod.selectAll(userRegister);
 
-var selectByCondition=function(condition,value){
+var selectByCondition=async function(condition,value){
 	return dbMethod.selectByCondition(userRegister,condition,value);
 }
 
-selectByCondition('name','a').then(function(e){
-	console.log(e)
-})
+var dbRegister={
+	selectAll: selectAll,
+	selectByCondition: selectByCondition
+}
+
+module.exports=dbRegister;

@@ -17,5 +17,5 @@ var userOpen = dbMethod.sequelize.define(dbName,{
     }
 );
 
-var selectAll=dbMethod.selectAll(userOpen);
+var selectAll=async()=>dbMethod.selectAll(userOpen);
 

@@ -15,8 +15,8 @@ $('button').click(function(event){
 	let pwd=$.trim(userPwd.val());
 	let pwdlen=pwd.length;
 
-	if(userlen<5){
-		error.text('用户名不能少于5位数！').show();
+	if(userlen<4){
+		error.text('用户名不能少于4位数！').show();
 		userName.focus();
 		return false;
 	}
@@ -58,9 +58,9 @@ $('button').click(function(event){
 			
 		},
 		success: function(data){
-			console.log(data)
 			if(data.status!=0){
 				error.text(data.message).show();
+
 			}
 			else{
 				location.href='/';
