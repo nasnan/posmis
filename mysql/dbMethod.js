@@ -41,10 +41,24 @@ var selectByCondition=async function(dbusername,condition,value){
     return ans;
 }
 
+var addNew=async function (dbname,value) {
+    let ans={};
+    return dbname.create(value).then((p)=>{
+        ans['status']=0;
+        return ans;
+    }).catch((err)=>{
+        console.log(err,'err');
+        ans['status']=1;
+        ans['err']=err;
+        return ans;
+    });
+}
+
 var dbMethod={
-    sequelize:sequelize,
-    selectAll:selectAll,
-    selectByCondition:selectByCondition
+    sequelize: sequelize,
+    selectAll: selectAll,
+    selectByCondition: selectByCondition,
+    addNew: addNew
 };
 module.exports=dbMethod;
 

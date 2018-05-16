@@ -21,9 +21,18 @@ var selectByCondition=async function(condition,value){
 	return dbMethod.selectByCondition(userRegister,condition,value);
 }
 
+var addNew=async function(userName,userPwd){
+	value={
+		name: userName,
+		password: userPwd
+	};
+	return dbMethod.addNew(userRegister,value);
+}
+
 var dbRegister={
 	selectAll: selectAll,
-	selectByCondition: selectByCondition
+	selectByCondition: selectByCondition,
+	addNew: addNew
 }
 
 module.exports=dbRegister;

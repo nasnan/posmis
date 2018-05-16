@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<% if(typeof(title) !== 'undefined'){ %>
+    <title><%= title %></title>
+    <% } %>
 	<link rel="stylesheet" type="text/css" href="../public/css/welcome.css">
 </head>
 <body>
@@ -16,7 +18,8 @@
 					<p><label>密码</label><input type="password" name="uesrPwd" id='uesrPwd' placeholder="请输入密码"></p>
 				</div>
 				<div class="signSubmitWrap">
-					<button type="submit" class="signSubmitBtn">注册</button>
+
+					<%- include log/register.ejs %>
 				</div>
 			</form>
 		</div>

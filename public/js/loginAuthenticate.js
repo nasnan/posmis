@@ -57,12 +57,13 @@ $('button').click(function(event){
 			password: pwd
 			
 		},
-		success: function(data){
+		success: function(data){	//already registered
+			console.log(data)
 			if(data.status!=0){
 				error.text(data.message).show();
-
 			}
-			else{
+			else{	//regeister
+				console.log("res suc")
 				location.href='/';
 			}
 		},
