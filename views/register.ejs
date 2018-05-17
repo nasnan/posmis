@@ -15,16 +15,17 @@
 					<p><label>用户名</label><input type="text" name="userName" id='userName' placeholder="请输入用户名"></p>
 				</div>
 				<div class="signPwdWrap">
-					<p><label>密码</label><input type="password" name="uesrPwd" id='uesrPwd' placeholder="请输入密码"></p>
+					<p><label>密码</label><input type="password" name="userPwd" id='userPwd' placeholder="请输入密码"></p>
 				</div>
+				<div class="signError"></div>
 				<div class="signSubmitWrap">
 
-					<%- include log/register.ejs %>
+					<button type="submit" class="signSubmitBtn">注册</button> 
 				</div>
 			</form>
 		</div>
 	</div>
 	<script type="text/javascript" src="../public/js/jquery.js"></script>
-	<script type="text/javascript" src="../public/js/loginAuthenticate.js"></script>
+	<script type="text/javascript" src="../public/js/registerAuthenticate.js"></script>
 </body>
 </html>

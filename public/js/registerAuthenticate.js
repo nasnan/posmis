@@ -1,9 +1,8 @@
 
 
 $('button').click(function(event){
-	//登陆认真
-	//1.检查用户名是否存在
-	//2.检查密码是否正确
+	//注册功能
+	//1.检查是否存在 否=》注册 是=》提示已存在
 
 	event.preventDefault();
 	let userName=$('#userName');
@@ -49,7 +48,7 @@ $('button').click(function(event){
 
 	$.ajax({
 		type: 'POST',
-		url: '/user/login',
+		url: '/user/register',
 		
 		dataType: 'json',
 		data: {
@@ -57,11 +56,11 @@ $('button').click(function(event){
 			password: pwd
 			
 		},
-		success: function(data){	
-			if(data.status!=0){		//没注册或密码错误
+		success: function(data){
+			if(data.status!=0){		//already registered
 				error.text(data.message).show();
 			}
-			else{
+			else{	//regeister
 				console.log("res suc")
 				location.href='/';
 			}

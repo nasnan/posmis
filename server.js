@@ -5,6 +5,7 @@ const server=require('koa-static');
 const router = require('koa-router')();
 const koaBody = require('koa-body');
 const user=require('./routes/user');
+const home=require('./routes/home')
 
 const views=require('koa-views')
 
@@ -17,7 +18,7 @@ app.use(views(__dirname+'/views',{
 }));
 
 router.use('/user',user.routes());
-
+router.use('/home',home.routes());
 
 // app.use(convert)
 

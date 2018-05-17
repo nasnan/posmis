@@ -34,9 +34,9 @@ var selectByCondition=async function(dbusername,condition,value){
             [key]:value,
         }
     });
-    let ans={"ans":[]};
+    let ans={};
     for (let u of users){
-        ans['ans'].push(JSON.stringify(u));
+        ans['ans']=(JSON.stringify(u));
     }
     return ans;
 }
