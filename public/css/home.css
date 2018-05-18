@@ -3,9 +3,9 @@
 	padding: 0;
 }
 .asideBar{
-	width: 220px;
+	width: 200px;
 	height: 100%;
-	/*background-color: #666;*/
+	background-color: #B0F26D;
 	position: fixed;
 	padding: 40px;
 }
@@ -14,4 +14,14 @@
 }
 ul{
 	list-style-type: none;
+}
+.warp_func li{
+	height: 30px;
+	line-height: 20px;
+	padding: 5px 0px;
+	text-align: center;
+}
+.warp_func a{
+	text-decoration: none;
+	color: #fff;
 }

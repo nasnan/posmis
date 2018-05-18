@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.asideBar{
+	width: 200px;
+	height: 100%;
+	background-color: #B0F26D;
+	position: fixed;
+	padding: 40px;
+}
+.UserMsg{
+	height: 100px;
+}
+ul{
+	list-style-type: none;
+}
+.warp_func li{
+	height: 30px;
+	line-height: 20px;
+	padding: 5px 0px;
+	text-align: center;
+}
+.warp_func a{
+	text-decoration: none;
+	color: #fff;
+}
+.main{
+	position: relative;
+	left: 280px;
+	margin-left: 100px;
+	padding-top: 100px;
+}
+.pageName{
+	margin: 0 0 50px 0;
+}
+.main form p{
+	margin-bottom: 15px;
+}
+form p label{
+	text-align: right;
+	width: 90px;
+	height: 30px;
+	display: inline-block;
+	margin-right: 15px;
+}
+.openSubmit{
+	margin-left: 105px;
+	width: 100px;
+	height: 30px;
+	color: #fff;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}
