@@ -3,11 +3,10 @@
 	padding: 0;
 }
 .asideBar{
-	width: 200px;
+	width: 240px;
 	height: 100%;
-	background-color: #B0F26D;
+	background-color: #47a3da;
 	position: fixed;
-	padding: 40px;
 }
 .UserMsg{
 	height: 100px;
@@ -15,18 +14,22 @@
 ul{
 	list-style-type: none;
 }
-.warp_func li{
-	height: 30px;
-	line-height: 20px;
-	padding: 5px 0px;
+.warp_func a{
+	display: block;
+	height: 50px;
+	line-height: 50px;
 	text-align: center;
+    border-bottom: 1px solid #258ecd;
+}
+.warp_func a:hover{
+	background-color: #258ecd;
 }
 .warp_func a{
 	text-decoration: none;
 	color: #fff;
 }
 .main{
-	position: relative;
+	position: absolute;
 	left: 280px;
 	margin-left: 100px;
 	padding-top: 100px;
