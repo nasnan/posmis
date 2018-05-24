@@ -12,15 +12,17 @@ $("#openBtn").click(function(event){
 
 
 	//密码认证
-	let pwdLen=cardPwd.length;
+	let pwdLen=parseInt(cardPwdVal.length);
+
 	if(pwdLen<6){
-		error.text("密码不能小于6位数");
-		error.focus();
+		error.text("密码不能小于6位数").show();
+		cardPwd.focus();
 		return false;
 	}
+
 	if(pwdLen>8){
-		error.text("密码不能大于8位数");
-		error.focus();
+		error.text("密码不能大于8位数").show();
+		cardPwd.focus();
 		return false;
 	}
 
@@ -30,16 +32,21 @@ $("#openBtn").click(function(event){
 		dataType: 'json',
 		data: {
 			bank_name: bankNameVal,
-			username: userName,
-			password: password,
+			username: userNameVal,
+			password: cardPwdVal,
 			money: range
 		},
-		success: function(data){
-			
+		success: function(data){	
+			if(data.status!=0){		//没注册或密码错误
+				error.text(data.message).show();
+			}
+			else{
+				location.href='/home';
+			}
 		},
 		error: function(data){
 			console.log(data);
-		}
+		} 
 	})
 
 })
