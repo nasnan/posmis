@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../public/css/asidebar.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/saving.css">
+</head>
+<body>
+	
+	<div class="wrap">
+		<%- include homePublic/asidebar.ejs%>
+		<div class="main">
+			<div class="pageName">
+				<h1>存钱</h1>
+			</div>
+			<form>
+				<div class="accountId">
+					<p><label>卡号</label><input type="text" name="name" id="accountId"></p>
+				</div>
+				<div class="sumMoney">
+					<p><label>存入金额</label><input type="text" name="sumMoney" id="sumMoney"></p>
+				</div>
+				<div class="submitBtn">
+					<button type="submit" class="openSubmit" id="submitBtn">提交</button>
+				</div>
+			</form>
+			<div class="error"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../public/js/jquery.js"></script>
+	<script type="text/javascript" src="../public/js/savingMethod.js"></script>
+
+</body>
+</html>

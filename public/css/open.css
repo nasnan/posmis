@@ -2,32 +2,6 @@
 	margin: 0;
 	padding: 0;
 }
-.asideBar{
-	width: 240px;
-	height: 100%;
-	background-color: #47a3da;
-	position: fixed;
-}
-.UserMsg{
-	height: 100px;
-}
-ul{
-	list-style-type: none;
-}
-.warp_func a{
-	display: block;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-    border-bottom: 1px solid #258ecd;
-}
-.warp_func a:hover{
-	background-color: #258ecd;
-}
-.warp_func a{
-	text-decoration: none;
-	color: #fff;
-}
 .main{
 	position: absolute;
 	left: 280px;
